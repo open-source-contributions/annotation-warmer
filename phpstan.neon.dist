@@ -8,4 +8,10 @@ parameters:
 	ignoreErrors:
 		-
 			path: %currentWorkingDirectory%/DependencyInjection/Configuration.php
-			message: '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\NodeDefinition::children()#'
+			message: '#Call to an undefined method Symfony\\Component\\Config\\Definition\\Builder\\TreeBuilder::root().#'
+		-
+			path: %currentWorkingDirectory%/Loader/FakeSerializerLoader.php
+			message: '#Method Happyr\\AnnotationWarmer\\Loader\\FakeSerializerLoader::loadClassMetadata().#'
+		-
+			path: %currentWorkingDirectory%/Loader/FakeValidatorLoader.php
+			message: '#Method Happyr\\AnnotationWarmer\\Loader\\FakeValidatorLoader::loadClassMetadata().#'

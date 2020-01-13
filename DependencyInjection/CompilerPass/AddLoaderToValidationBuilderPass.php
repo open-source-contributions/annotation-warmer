@@ -18,7 +18,7 @@ final class AddLoaderToValidationBuilderPass implements CompilerPassInterface
     {
         if (!$container->hasDefinition('validator.builder')) {
             return;
-        };
+        }
 
         $validatorBuilder = $container->getDefinition('validator.builder');
         $validatorBuilder->addMethodCall('addLoader', [new Reference(FakeValidatorLoader::class)]);
